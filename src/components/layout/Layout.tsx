@@ -4,10 +4,12 @@ import { Footer } from "./Footer";
 
 export function Layout() {
   return (
-    <div>
+    <div className="min-h-screen grid grid-rows-[auto_1fr_auto]">
       <Header />
-      <Outlet />
+      <main>
+        <Outlet />
+      </main>
       <Footer />
     </div>
-  )
+  );
 }

@@ -1,7 +1,7 @@
 export function Footer() {
   return (
     <footer>
-      Testing footer
+       &copy; LoopCart 2025
     </footer>
   )
 }
