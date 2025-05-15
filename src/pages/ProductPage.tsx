@@ -1,11 +1,15 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import type { TProduct } from "../types/product";
+import { ProductPrice } from "../components/common/ProductPrice";
+import { useCart } from "../store/useCart";
 
 export function ProductPage() {
   const { id } = useParams<{ id: string }>();
-  const { product, setProduct } = useState<TProduct | null>(null);
+  const [product, setProduct] = useState<TProduct | null>(null);
   const [loading, setLoading] = useState(true);
+
+  const addToCart = useCart((state) => state.addToCart);
 
   useEffect(() => {
     async function fetchProduct() {
@@ -21,18 +25,28 @@ export function ProductPage() {
     }
     fetchProduct(); 
   }, [id]);
+  if (loading) {
+    return <p>Loading product...</p>;
+  }
+
+  if (!product) {
+    return <p>Product not found.</p>;
+  }
         
   return (
     <div>
-    <img src="" alt="" />
+    <img src={product.image.url} alt={product.image.alt || product.title} />
     <div>
       <div>
-        <h2>Title</h2>
-        <p>price</p>
+        <h2>{product.title}</h2>
+        <ProductPrice
+          price={product.price}
+          discountPrice={product.discountedPrice}
+        />
       </div>
-      <p>Description</p>
+      <p>{product.description}</p>
     </div>
-    <button>Add to cart</button>
+    <button onClick={() => addToCart(product)}>Add to cart</button>
     </div>
   );
 }
