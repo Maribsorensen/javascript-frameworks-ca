@@ -4,7 +4,7 @@ import { ProductCard } from "../components/common/ProductCard";
 import { SearchBar } from "../components/common/SearchBar";
 import type { TProduct } from "../types/product";
 
-export function Home() {
+export function HomePage() {
   const [search, setSearch] = useState("");
   const [loading, setLoading] = useState(true);
   const [products, setProducts] = useState<TProduct[]>([]);
