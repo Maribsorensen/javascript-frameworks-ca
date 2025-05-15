@@ -18,6 +18,11 @@ export function ContactPage() {
             label="Subject"
             value={subject}
             />
+          <input
+            type="textarea"
+            value={message}
+            />
+          <button type="submit">Send</button>
         </form>
       </div>
     </div>
