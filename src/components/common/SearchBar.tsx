@@ -6,8 +6,9 @@ type SearchBarProps = {
 
 export function SearchBar({ value, onChange }: SearchBarProps) {
   return (
-    <div>
-      <input type="text" value={value} onChange={(event) => onChange(event.target.value)} placeholder="Search for products..." />
+    <div className="text-center p-2">
+      <input className="bg-primary w-2/4 rounded-md placeholder-white font-headings px-2 py-1"
+   type="text" value={value} onChange={(event) => onChange(event.target.value)} placeholder="Search for products..." />
     </div>
   );
 }
