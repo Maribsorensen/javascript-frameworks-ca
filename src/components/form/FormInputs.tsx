@@ -1,19 +1,18 @@
-type Props = {
-  label: string;
-  value: string;
-  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
-  error?: string;
-};
+import React from "react";
 
-export function FormInputs({ label, value, onChange, error }: Props) {
-  return (
-    <div>
-      <label>{label}</label>
-      <input
-        value={value}
-        onChange={onChange}
-      />
-      {error && <p>{error}</p>}
-    </div>
-  );
-}
+type FormInputProps = {
+  label: string;
+  error?: string;
+} & React.InputHTMLAttributes<HTMLInputElement>;
+
+export const FormInputs = React.forwardRef<HTMLInputElement, FormInputProps>(
+  ({ label, error, ...inputProps }, ref) => {
+    return (
+      <div>
+        <label>{label}</label>
+        <input ref={ref} {...inputProps} />
+        {error && <p style={{ color: "red" }}>{error}</p>}
+      </div>
+    );
+  }
+);

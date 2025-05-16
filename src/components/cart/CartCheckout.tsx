@@ -20,7 +20,7 @@ export function CartCheckout() {
   return (
     <div>
       <h2>Checkout</h2>
-      <p>Subtotal: ${subtotal.toFixed(2)}</p>
+      <p>Subtotal: {subtotal.toFixed(2)} NOK</p>
       <button onClick={handlePurchase}>Purchase</button>
     </div>
   );
