@@ -1,5 +1,6 @@
 import { useForm } from "react-hook-form";
 import { FormInputs } from "../components/form/FormInputs";
+import { Button } from "../components/common/Button";
 
 type FormValues = {
   fullName: string;
@@ -50,7 +51,7 @@ export function ContactPage() {
           />
           {errors.message && <p>{errors.message.message}</p>}
         </div>
-        <button type="submit">Send</button>
+        <Button type="submit">Send</Button>
         </form>
       </div>
     </div>

@@ -1,5 +1,6 @@
 import { useCart } from "../../store/useCart";
 import { useNavigate } from "react-router-dom";
+import { Button } from "../common/Button";
 
 export function CartCheckout() {
   const { items, clearCart } = useCart();
@@ -21,7 +22,7 @@ export function CartCheckout() {
     <div>
       <h2>Checkout</h2>
       <p>Subtotal: {subtotal.toFixed(2)} NOK</p>
-      <button onClick={handlePurchase}>Purchase</button>
+      <Button onClick={handlePurchase}>Purchase</Button>
     </div>
   );
 }

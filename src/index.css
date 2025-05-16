@@ -1,1 +1,10 @@
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Karma:wght@300;400;500;600;700&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --font-headings: 'Bitter', sans-serif;
+  --font-body: 'Karma', sans-serif;
+
+  --color-primary: #266975;
+  --color-hover: #1e545d;
+}

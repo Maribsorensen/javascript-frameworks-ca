@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import type { TProduct } from "../types/product";
 import { ProductPrice } from "../components/common/ProductPrice";
 import { useCart } from "../store/useCart";
+import { Button } from "../components/common/Button";
 
 export function ProductPage() {
   const { id } = useParams<{ id: string }>();
@@ -46,7 +47,7 @@ export function ProductPage() {
       </div>
       <p>{product.description}</p>
     </div>
-    <button onClick={() => addToCart(product)}>Add to cart</button>
+    <Button onClick={() => addToCart(product)}>Add to cart</Button>
     </div>
   );
 }
