@@ -10,7 +10,7 @@ export function Header() {
   const totalQuantity = items.reduce((sum, item) => sum + item.quantity, 0);
 
   return (
-    <header>
+    <header className="bg-white">
       <nav>
         <ul>
           <li>
