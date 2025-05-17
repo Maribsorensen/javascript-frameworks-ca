@@ -4,6 +4,7 @@ import type { TProduct } from '../types/product';
 import { ProductPrice } from '../components/common/ProductPrice';
 import { useCart } from '../store/useCart';
 import { Button } from '../components/common/Button';
+import toast from 'react-hot-toast';
 
 export function ProductPage() {
   const { id } = useParams<{ id: string }>();
@@ -11,6 +12,14 @@ export function ProductPage() {
   const [loading, setLoading] = useState(true);
 
   const addToCart = useCart((state) => state.addToCart);
+  const handleAddToCart = () => {
+    if (product) {
+      addToCart(product);
+      toast.success('Added to cart!');
+    } else {
+      toast.error('No product selected');
+    }
+  };
 
   useEffect(() => {
     async function fetchProduct() {
@@ -47,7 +56,7 @@ export function ProductPage() {
         <h1 className="text-2xl font-headings font-semibold">{product.title}</h1>
         <ProductPrice price={product.price} discountPrice={product.discountedPrice} />
         <p className="font-body text-gray-900 leading-relaxed">{product.description}</p>
-        <Button onClick={() => addToCart(product)} className="w-fit">
+        <Button onClick={handleAddToCart} className="w-fit">
           Add to Cart
         </Button>
       </div>

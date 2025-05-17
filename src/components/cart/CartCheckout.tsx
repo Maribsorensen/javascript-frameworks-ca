@@ -1,6 +1,7 @@
 import { useCart } from '../../store/useCart';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '../common/Button';
+import { toast } from 'react-hot-toast';
 
 export function CartCheckout() {
   const { items, clearCart } = useCart();
@@ -13,6 +14,7 @@ export function CartCheckout() {
 
   const handlePurchase = () => {
     clearCart();
+    toast.success('Purchase successful!');
     navigate('/success');
   };
 

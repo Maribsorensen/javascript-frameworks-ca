@@ -1,6 +1,7 @@
 import { useForm } from 'react-hook-form';
 import { FormInputs } from '../components/form/FormInputs';
 import { Button } from '../components/common/Button';
+import { toast } from 'react-hot-toast';
 
 type FormValues = {
   fullName: string;
@@ -19,7 +20,7 @@ export function ContactPage() {
 
   const onSubmit = (data: FormValues) => {
     console.log('Form submitted:', data);
-
+    toast.success('Sent! We will get back to you soon.');
     reset();
   };
 
