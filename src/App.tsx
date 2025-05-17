@@ -16,7 +16,7 @@ function App() {
         <Route path="/cart" element={<CartPage />} />
         <Route path="/success" element={<CheckoutSuccessPage />} />
         <Route path="/contact" element={<ContactPage />} />
-        <Route path="*" element={<h1>404 Not Found</h1>} />
+        <Route path="*" element={<h1 className="font-headings">404 Not Found</h1>} />
       </Route>
     </Routes>
   );
