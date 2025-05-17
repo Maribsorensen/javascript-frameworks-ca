@@ -30,7 +30,7 @@ export function HomePage() {
 
 
   return(
-    <div>
+    <div className="flex flex-col gap-4">
       <HomeHero />
       <SearchBar value={search} onChange={setSearch} />
       <section>

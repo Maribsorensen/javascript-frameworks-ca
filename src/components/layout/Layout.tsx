@@ -4,7 +4,7 @@ import { Footer } from "./Footer";
 
 export function Layout() {
   return (
-    <div className="min-h-screen grid grid-rows-[auto_1fr_auto] bg-gray-300">
+    <div className="min-h-screen grid grid-rows-[auto_1fr_auto] gap-4 bg-gray-300">
       <Header />
       <main className="max-w-screen-xl mx-auto w-full px-4">
         <Outlet />

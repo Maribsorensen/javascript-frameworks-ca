@@ -20,8 +20,8 @@ export function ContactPage() {
 
   return (
     <div>
-      <div>
-        <h1>Contact Us!</h1>
+      <div className="flex flex-col items-center justify-center bg-white md:w-1/2 mx-auto p-2">
+        <h1 className="font-headings text-primary mb-4">Contact Us!</h1>
       <form onSubmit={handleSubmit(onSubmit)}>
         <FormInputs
           label="Full Name"
@@ -44,14 +44,16 @@ export function ContactPage() {
           error={errors.subject?.message}
           {...register("subject", { required: "Subject is required" })}
         />
-        <div>
-          <label>Message</label>
-          <textarea
+        <div className="flex flex-col gap-1">
+          <label className="font-body">Message</label>
+          <textarea className="border-1 rounded-md mb-4  shadow-md/20"
             {...register("message", { required: "Message is required" })}
           />
           {errors.message && <p>{errors.message.message}</p>}
         </div>
+        <div className="text-center">
         <Button type="submit">Send</Button>
+        </div>
         </form>
       </div>
     </div>
