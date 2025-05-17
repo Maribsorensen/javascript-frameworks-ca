@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
-import type { TProduct } from "../../types/product";
-import { ProductPrice } from "./ProductPrice";
+import { Link } from 'react-router-dom';
+import type { TProduct } from '../../types/product';
+import { ProductPrice } from './ProductPrice';
 
 type ProductCardProps = {
   product: TProduct;
@@ -22,10 +22,7 @@ export function ProductCard({ product }: ProductCardProps) {
           <h2 className="text-lg font-body font-semibold">{product.title}</h2>
 
           <div>
-            <ProductPrice
-              price={product.price}
-              discountPrice={product.discountedPrice}
-            />
+            <ProductPrice price={product.price} discountPrice={product.discountedPrice} />
           </div>
         </div>
       </Link>

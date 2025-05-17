@@ -1,4 +1,4 @@
-import LoopCartHero from "../../assets/LoopCartHero.png";
+import LoopCartHero from '../../assets/LoopCartHero.png';
 
 export function HomeHero() {
   return (

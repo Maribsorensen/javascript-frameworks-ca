@@ -1,16 +1,16 @@
-import type React from "react";
+import type React from 'react';
 
 type ButtonProps = {
   children: React.ReactNode;
   className?: string;
-  type?: "button" | "submit" | "reset";
-  onClick?: () => void; 
+  type?: 'button' | 'submit' | 'reset';
+  onClick?: () => void;
   disabled?: boolean;
 };
 export const Button = ({
   children,
-  className = "",
-  type = "button",
+  className = '',
+  type = 'button',
   onClick,
   disabled = false,
 }: ButtonProps) => {
@@ -24,4 +24,4 @@ export const Button = ({
       {children}
     </button>
   );
-}
+};

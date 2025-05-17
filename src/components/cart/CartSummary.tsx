@@ -1,6 +1,6 @@
-import { FaTrash } from "react-icons/fa";
-import { useCart } from "../../store/useCart";
-import { ProductPrice } from "../common/ProductPrice";
+import { FaTrash } from 'react-icons/fa';
+import { useCart } from '../../store/useCart';
+import { ProductPrice } from '../common/ProductPrice';
 
 export function CartSummary() {
   const { items, removeFromCart } = useCart();

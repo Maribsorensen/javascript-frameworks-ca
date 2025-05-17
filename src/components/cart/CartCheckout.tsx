@@ -1,6 +1,6 @@
-import { useCart } from "../../store/useCart";
-import { useNavigate } from "react-router-dom";
-import { Button } from "../common/Button";
+import { useCart } from '../../store/useCart';
+import { useNavigate } from 'react-router-dom';
+import { Button } from '../common/Button';
 
 export function CartCheckout() {
   const { items, clearCart } = useCart();
@@ -13,7 +13,7 @@ export function CartCheckout() {
 
   const handlePurchase = () => {
     clearCart();
-    navigate("/success");
+    navigate('/success');
   };
 
   if (items.length === 0) return null;
@@ -25,7 +25,9 @@ export function CartCheckout() {
         <p className="font-body">Subtotal:</p>
         <p className="font-body">{subtotal.toFixed(2)} NOK</p>
       </div>
-      <Button className="w-full" onClick={handlePurchase}>Purchase</Button>
+      <Button className="w-full" onClick={handlePurchase}>
+        Purchase
+      </Button>
     </div>
   );
 }

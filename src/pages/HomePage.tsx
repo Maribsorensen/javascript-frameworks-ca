@@ -1,35 +1,34 @@
-import { useEffect, useState } from "react";
-import { HomeHero } from "../components/common/HomeHero";
-import { ProductCard } from "../components/common/ProductCard";
-import { SearchBar } from "../components/common/SearchBar";
-import type { TProduct } from "../types/product";
+import { useEffect, useState } from 'react';
+import { HomeHero } from '../components/common/HomeHero';
+import { ProductCard } from '../components/common/ProductCard';
+import { SearchBar } from '../components/common/SearchBar';
+import type { TProduct } from '../types/product';
 
 export function HomePage() {
-  const [search, setSearch] = useState("");
+  const [search, setSearch] = useState('');
   const [loading, setLoading] = useState(true);
   const [products, setProducts] = useState<TProduct[]>([]);
-  
+
   const searchedProducts = products.filter((product) =>
-    product.title.toLowerCase().includes(search.toLowerCase()),
+    product.title.toLowerCase().includes(search.toLowerCase())
   );
 
   useEffect(() => {
     async function fetchProducts() {
       try {
-        const res = await fetch("https://v2.api.noroff.dev/online-shop");
+        const res = await fetch('https://v2.api.noroff.dev/online-shop');
         const json = await res.json();
         setProducts(json.data);
       } catch (error) {
-      console.error("Error fetching products:", error);
-    } finally {
+        console.error('Error fetching products:', error);
+      } finally {
         setLoading(false);
       }
     }
     fetchProducts();
   }, []);
 
-
-  return(
+  return (
     <div className="flex flex-col gap-4">
       <HomeHero />
       <SearchBar value={search} onChange={setSearch} />

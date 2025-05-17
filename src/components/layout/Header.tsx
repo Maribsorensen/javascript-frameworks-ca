@@ -1,7 +1,7 @@
-import { NavLink, useNavigate } from "react-router-dom";
-import { useCart } from "../../store/useCart";
-import LoopCartLogo from "../../assets/loopcart-high-resolution-logo.png";
-import { FaShoppingBasket } from "react-icons/fa";
+import { NavLink, useNavigate } from 'react-router-dom';
+import { useCart } from '../../store/useCart';
+import LoopCartLogo from '../../assets/loopcart-high-resolution-logo.png';
+import { FaShoppingBasket } from 'react-icons/fa';
 
 export function Header() {
   const { items } = useCart();
@@ -18,7 +18,7 @@ export function Header() {
               src={LoopCartLogo}
               alt="LoopCart logo"
               className="h-10 w-auto object-contain"
-              style={{ marginRight: "-12px" }} 
+              style={{ marginRight: '-12px' }}
             />
           </NavLink>
         </div>
@@ -28,8 +28,8 @@ export function Header() {
               to="/"
               className={({ isActive }) =>
                 isActive
-                  ? "border-black border-b-2 pb-1 font-headings"
-                  : "hover:font-bold transition font-headings"
+                  ? 'border-black border-b-2 pb-1 font-headings'
+                  : 'hover:font-bold transition font-headings'
               }
             >
               HOME
@@ -40,8 +40,8 @@ export function Header() {
               to="/contact"
               className={({ isActive }) =>
                 isActive
-                  ? "border-black border-b-2 pb-1 font-headings"
-                  : "hover:font-bold transition font-headings"
+                  ? 'border-black border-b-2 pb-1 font-headings'
+                  : 'hover:font-bold transition font-headings'
               }
             >
               CONTACT
@@ -49,7 +49,7 @@ export function Header() {
           </li>
         </ul>
         <button
-          onClick={() => navigate("/cart")}
+          onClick={() => navigate('/cart')}
           className="relative text-2xl hover:text-gray-600 transition cursor-pointer"
           aria-label="Go to cart"
         >
