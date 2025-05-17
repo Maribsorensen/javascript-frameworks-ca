@@ -25,7 +25,7 @@ export function ContactPage() {
 
   return (
     <div>
-      <div className="flex flex-col items-center justify-center bg-white md:w-1/2 mx-auto p-2">
+      <div className="flex flex-col items-center justify-center bg-white md:w-1/2 mx-auto p-2 rounded-md">
         <h1 className="font-headings text-primary mb-4">Contact Us!</h1>
         <form onSubmit={handleSubmit(onSubmit)}>
           <FormInputs

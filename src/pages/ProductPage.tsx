@@ -35,16 +35,22 @@ export function ProductPage() {
   }
 
   return (
-    <div>
-      <img src={product.image.url} alt={product.image.alt || product.title} />
-      <div>
-        <div>
-          <h2>{product.title}</h2>
-          <ProductPrice price={product.price} discountPrice={product.discountedPrice} />
-        </div>
-        <p>{product.description}</p>
+    <div className="max-w-6xl mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-2 gap-10">
+      <div className="flex justify-center items-center">
+        <img
+          src={product.image.url}
+          alt={product.image.alt || product.title}
+          className="w-full max-w-md rounded-xl shadow"
+        />
       </div>
-      <Button onClick={() => addToCart(product)}>Add to cart</Button>
+      <div className="flex flex-col justify-center space-y-6">
+        <h1 className="text-2xl font-headings font-semibold">{product.title}</h1>
+        <ProductPrice price={product.price} discountPrice={product.discountedPrice} />
+        <p className="font-body text-gray-900 leading-relaxed">{product.description}</p>
+        <Button onClick={() => addToCart(product)} className="w-fit">
+          Add to Cart
+        </Button>
+      </div>
     </div>
   );
 }

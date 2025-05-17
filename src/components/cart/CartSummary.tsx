@@ -6,7 +6,7 @@ export function CartSummary() {
   const { items, removeFromCart } = useCart();
 
   if (items.length === 0) {
-    return <p>Your cart is empty!</p>;
+    return <p className="font-body">Your cart is empty!</p>;
   }
 
   return (
