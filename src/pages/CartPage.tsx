@@ -3,9 +3,11 @@ import { CartCheckout } from "../components/cart/CartCheckout";
 
 export function CartPage() {
   return (
-    <div>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-6">
       <CartSummary />
-      <CartCheckout />
+      <div className="md:ml-6 w-full">
+    <CartCheckout />
+  </div>
     </div>
   );
 }

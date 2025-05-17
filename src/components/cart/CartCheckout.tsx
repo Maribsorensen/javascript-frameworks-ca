@@ -19,10 +19,13 @@ export function CartCheckout() {
   if (items.length === 0) return null;
 
   return (
-    <div>
-      <h2>Checkout</h2>
-      <p>Subtotal: {subtotal.toFixed(2)} NOK</p>
-      <Button onClick={handlePurchase}>Purchase</Button>
+    <div className="bg-white rounded-2xl shadow p-6 flex flex-col justify-between">
+      <h2 className="text-xl font-headings mb-6 text-center">Checkout</h2>
+      <div className="flex justify-between text-lg font-medium mb-4">
+        <p className="font-body">Subtotal:</p>
+        <p className="font-body">{subtotal.toFixed(2)} NOK</p>
+      </div>
+      <Button className="w-full" onClick={handlePurchase}>Purchase</Button>
     </div>
   );
 }
