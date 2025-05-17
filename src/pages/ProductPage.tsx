@@ -6,6 +6,12 @@ import { useCart } from '../store/useCart';
 import { Button } from '../components/common/Button';
 import toast from 'react-hot-toast';
 
+/**
+ * ProductPage component displays detailed information about a specific product.
+ * It fetches product data based on the product ID from the URL parameters.
+ * @returns {JSX.Element} The ProductPage component.
+ */
+
 export function ProductPage() {
   const { id } = useParams<{ id: string }>();
   const [product, setProduct] = useState<TProduct | null>(null);

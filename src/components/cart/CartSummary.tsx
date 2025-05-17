@@ -2,6 +2,12 @@ import { FaTrash } from 'react-icons/fa';
 import { useCart } from '../../store/useCart';
 import { ProductPrice } from '../common/ProductPrice';
 
+/**
+ * CartSummary component displays the summary of items in the cart.
+ * It shows the product image, title, price, quantity, and a button to remove the item from the cart.
+ * @returns {JSX.Element} The CartSummary component.
+ */
+
 export function CartSummary() {
   const { items, removeFromCart } = useCart();
 

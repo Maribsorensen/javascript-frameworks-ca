@@ -1,3 +1,5 @@
+// Defines the TypeScript types for the product data structure.
+
 export type TProduct = {
   id: string;
   title: string;

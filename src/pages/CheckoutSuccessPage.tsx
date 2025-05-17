@@ -1,3 +1,8 @@
+/**
+ *
+ * @returns {JSX.Element} The CheckoutSuccessPage component.
+ */
+
 export function CheckoutSuccessPage() {
   return (
     <div className="text-center">

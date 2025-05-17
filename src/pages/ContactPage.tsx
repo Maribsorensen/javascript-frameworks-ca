@@ -3,6 +3,13 @@ import { FormInputs } from '../components/form/FormInputs';
 import { Button } from '../components/common/Button';
 import { toast } from 'react-hot-toast';
 
+/**
+ * ContactPage component displays a contact form for users to reach out.
+ * It uses react-hook-form for form handling and validation.
+ * @param {object} props - The component props.
+ * @returns {JSX.Element} The ContactPage component.
+ */
+
 type FormValues = {
   fullName: string;
   email: string;

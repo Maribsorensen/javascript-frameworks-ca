@@ -2,6 +2,13 @@ import { Link } from 'react-router-dom';
 import type { TProduct } from '../../types/product';
 import { ProductPrice } from './ProductPrice';
 
+/**
+ * ProductCard component displays a product card with an image, title, and price.
+ * It is a link to the product details page.
+ * @param {TProduct} product - The product object containing details to display.
+ * @returns {JSX.Element} The ProductCard component.
+ */
+
 type ProductCardProps = {
   product: TProduct;
 };

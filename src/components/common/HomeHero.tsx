@@ -1,5 +1,11 @@
 import LoopCartHero from '../../assets/LoopCartHero.png';
 
+/**
+ * HomeHero component
+ * A hero section for the home page, showcasing a shopping bag image and a tagline.
+ * @returns {JSX.Element} The HomeHero component.
+ */
+
 export function HomeHero() {
   return (
     <section className="flex flex-col md:flex-row items-center bg-white p-8 md:p-16 max-w-7xl mx-auto gap-8 rounded-lg">

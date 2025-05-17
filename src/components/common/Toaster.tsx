@@ -1,5 +1,11 @@
 import { Toaster, ToastBar, ToastIcon } from 'react-hot-toast';
 
+/**
+ * AppToaster component displays a toast notification system.
+ * It uses the react-hot-toast library to show notifications at the top center of the screen.
+ * @returns {JSX.Element} The AppToaster component.
+ */
+
 export function AppToaster() {
   return (
     <Toaster position="top-center" toastOptions={{ duration: 3000 }}>

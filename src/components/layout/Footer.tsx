@@ -1,5 +1,11 @@
 import { FaTwitter, FaInstagram, FaFacebookF } from 'react-icons/fa';
 
+/**
+ * Footer component displays the footer section of the application.
+ * It includes social media links and copyright information.
+ * @returns {JSX.Element} The Footer component.
+ */
+
 export function Footer() {
   return (
     <footer className="bg-primary text-white py-6 mt-12">

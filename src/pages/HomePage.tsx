@@ -4,6 +4,12 @@ import { ProductCard } from '../components/common/ProductCard';
 import { SearchBar } from '../components/common/SearchBar';
 import type { TProduct } from '../types/product';
 
+/**
+ * HomePage component serves as the main landing page of the application.
+ * It fetches and displays a list of products with a search bar for filtering.
+ * @returns {JSX.Element} The HomePage component.
+ */
+
 export function HomePage() {
   const [search, setSearch] = useState('');
   const [loading, setLoading] = useState(true);

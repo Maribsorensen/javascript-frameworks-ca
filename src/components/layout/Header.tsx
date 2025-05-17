@@ -4,6 +4,13 @@ import { useCart } from '../../store/useCart';
 import LoopCartLogo from '../../assets/loopcart-high-resolution-logo.png';
 import { FaShoppingBasket, FaBars, FaTimes } from 'react-icons/fa';
 
+/**
+ *  Header component
+ *  Displays the header section of the application with navigation links and a cart icon.
+ * It includes a logo, links to home and contact pages, and a cart icon with item count.
+ * @returns {JSX.Element} The Header component.
+ */
+
 export function Header() {
   const { items } = useCart();
   const navigate = useNavigate();

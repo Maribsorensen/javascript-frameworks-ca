@@ -1,3 +1,13 @@
+/**
+ * ProductPrice component
+ * Displays the price and discount price of a product.
+ * If the discount price is lower than the regular price,
+ * it shows the discount percentage.
+ * @param {number} price - The original price of the product.
+ * @param {number} discountPrice - The discounted price of the product.
+ * * @returns {JSX.Element} The ProductPrice component.
+ */
+
 type ProductPriceProps = {
   price: number;
   discountPrice: number;

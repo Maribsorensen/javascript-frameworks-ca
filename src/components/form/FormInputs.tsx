@@ -1,5 +1,14 @@
 import React from 'react';
 
+/**
+ * FormInputs component is a reusable input field with a label and optional error message.
+ * It accepts all standard input attributes and forwards the ref to the input element.
+ * @param {string} label - The label for the input field.
+ * @param {string} [error] - Optional error message to display below the input field.
+ * @param {React.InputHTMLAttributes<HTMLInputElement>} inputProps - Additional input attributes.
+ * @returns {JSX.Element} The FormInputs component.
+ */
+
 type FormInputProps = {
   label: string;
   error?: string;

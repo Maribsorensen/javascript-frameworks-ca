@@ -1,3 +1,12 @@
+/**
+ * SearchBar component
+ * A reusable search bar component for filtering products.
+ * It accepts a value and an onChange handler to update the search input.
+ * @param {string} value - The current value of the search input.
+ * @param {(value: string) => void} onChange - The function to call when the input value changes.
+ * @returns {JSX.Element} The SearchBar component.
+ */
+
 type SearchBarProps = {
   value: string;
   onChange: (value: string) => void;

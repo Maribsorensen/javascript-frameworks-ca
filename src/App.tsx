@@ -7,6 +7,12 @@ import { CartPage } from './pages/CartPage';
 import { CheckoutSuccessPage } from './pages/CheckoutSuccessPage';
 import { ContactPage } from './pages/ContactPage';
 
+/**
+ * App component that sets up the main routing for the application.
+ * It includes routes for home, product details, cart, checkout success, and contact pages.
+ * @returns {JSX.Element} The App component.
+ */
+
 function App() {
   return (
     <Routes>

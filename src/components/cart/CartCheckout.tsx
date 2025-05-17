@@ -3,6 +3,12 @@ import { useNavigate } from 'react-router-dom';
 import { Button } from '../common/Button';
 import { toast } from 'react-hot-toast';
 
+/**
+ * CartCheckout component displays the checkout section of the cart.
+ * It shows the subtotal of items in the cart and a button to proceed with the purchase.
+ * @returns {JSX.Element | null} The CartCheckout component or null if there are no items in the cart.
+ */
+
 export function CartCheckout() {
   const { items, clearCart } = useCart();
   const navigate = useNavigate();
