@@ -85,4 +85,5 @@ As this project is for a course assignment, I am not accepting external contribu
 
 # Contact
 
-[My Linkedin Page](https://github.com/Maribsorensen)
+[My Linkedin Page](https://no.linkedin.com/in/mari-berg-s%C3%B8rensen-b63425156)
+[My GitHub](https://github.com/Maribsorensen)
