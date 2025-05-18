@@ -19,9 +19,14 @@ export function CartCheckout() {
   );
 
   const handlePurchase = () => {
-    clearCart();
-    toast.success('Purchase successful!');
-    navigate('/success');
+    try {
+      clearCart();
+      toast.success('Purchase successful!');
+      navigate('/success');
+    } catch (error) {
+      console.error('Checkout failed:', error);
+      toast.error('Something went wrong. Please try again.');
+    }
   };
 
   if (items.length === 0) return null;

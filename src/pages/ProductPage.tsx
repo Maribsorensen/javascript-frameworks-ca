@@ -50,22 +50,39 @@ export function ProductPage() {
   }
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-2 gap-10">
-      <div className="flex justify-center items-center">
-        <img
-          src={product.image.url}
-          alt={product.image.alt || product.title}
-          className="w-full max-w-md rounded-xl shadow"
-        />
+    <>
+      <div className="max-w-6xl mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div className="flex justify-center items-center">
+          <img
+            src={product.image.url}
+            alt={product.image.alt || product.title}
+            className="w-full max-w-md rounded-xl shadow"
+          />
+        </div>
+        <div className="flex flex-col justify-center space-y-6">
+          <h1 className="text-2xl font-headings font-semibold">{product.title}</h1>
+          <ProductPrice price={product.price} discountPrice={product.discountedPrice} />
+          <p className="font-body text-gray-900 leading-relaxed">{product.description}</p>
+          <Button onClick={handleAddToCart} className="w-fit">
+            Add to Cart
+          </Button>
+        </div>
       </div>
-      <div className="flex flex-col justify-center space-y-6">
-        <h1 className="text-2xl font-headings font-semibold">{product.title}</h1>
-        <ProductPrice price={product.price} discountPrice={product.discountedPrice} />
-        <p className="font-body text-gray-900 leading-relaxed">{product.description}</p>
-        <Button onClick={handleAddToCart} className="w-fit">
-          Add to Cart
-        </Button>
-      </div>
-    </div>
+      {product.reviews && product.reviews.length > 0 && (
+        <div className="max-w-4xl mx-auto mt-12 space-y-6">
+          <h2 className="text-xl font-headings font-semibold border-b pb-2">Customer Reviews</h2>
+          {product.reviews.map((review) => (
+            <div key={review.id} className="border rounded-xl p-4 shadow-sm bg-gray-50 space-y-1">
+              <div className="font-body font-semibold">{review.username}</div>
+              <div className="text-yellow-500">
+                {'★'.repeat(review.rating)}
+                {'☆'.repeat(5 - review.rating)}
+              </div>
+              <p className="font-body text-gray-700">{review.description}</p>
+            </div>
+          ))}
+        </div>
+      )}
+    </>
   );
 }

@@ -1,6 +1,7 @@
 import { FaTrash } from 'react-icons/fa';
 import { useCart } from '../../store/useCart';
 import { ProductPrice } from '../common/ProductPrice';
+import toast from 'react-hot-toast';
 
 /**
  * CartSummary component displays the summary of items in the cart.
@@ -31,7 +32,10 @@ export function CartSummary() {
               <ProductPrice price={item.price} discountPrice={item.discountedPrice} />
               <p className="font-body">Quantity: {item.quantity}</p>
               <button
-                onClick={() => removeFromCart(item.id)}
+                onClick={() => {
+                  removeFromCart(item.id);
+                  toast.success(`${item.title} removed from cart`);
+                }}
                 className="text-red-700 hover:text-red-900 text-sm font-body cursor-pointer"
               >
                 <FaTrash />
