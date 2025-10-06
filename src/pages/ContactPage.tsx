@@ -25,8 +25,9 @@ export function ContactPage() {
     reset,
   } = useForm<FormValues>();
 
-  const onSubmit = (data: FormValues) => {
-    console.log('Form submitted:', data);
+  const onSubmit = () => {
+    // This is a form for demonstration purposes.
+    // No backend exists to handle the submitted data.
     toast.success('Sent! We will get back to you soon.');
     reset();
   };
@@ -58,9 +59,12 @@ export function ContactPage() {
             {...register('subject', { required: 'Subject is required' })}
           />
           <div className="flex flex-col gap-1">
-            <label className="font-body">Message</label>
+            <label htmlFor="message" className="font-body">
+              Message
+            </label>
             <textarea
-              className="border-1 rounded-md mb-4  shadow-md/20"
+              id="message"
+              className="border-1 rounded-md mb-4 shadow-md/20"
               {...register('message', { required: 'Message is required' })}
             />
             {errors.message && <p>{errors.message.message}</p>}

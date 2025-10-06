@@ -2,8 +2,10 @@ import { FaCheck } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 /**
+ * CheckoutSuccessPage component that displays a confirmation message
+ * after a successful checkout, along with a link back to the store.
  *
- * @returns {JSX.Element} The CheckoutSuccessPage component.
+ * @returns {JSX.Element} The rendered CheckoutSuccessPage component.
  */
 
 export function CheckoutSuccessPage() {
