@@ -83,7 +83,17 @@ npm run preview
 
 As this project is for a course assignment, I am not accepting external contributions at this point. Feedback or suggestions are always welcome.
 
+
 # Contact
 
 [My Linkedin Page](https://no.linkedin.com/in/mari-berg-s%C3%B8rensen-b63425156)
 [My GitHub](https://github.com/Maribsorensen)
+
+# Improvements
+
+Based on teacher feedback after delivery I have done the following improvements:
+
+- **JS Docs** - Some files were missing or lacking enoguh code description. These have been improved
+- **console.log** - Some console.logs were hiding and have been removed
+- **Form labels** - The contact page had a missing label for the message field. This is now using the correct HTMLfor
+- **Unused files** - Files that was unused has been removed
