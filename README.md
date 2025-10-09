@@ -1,5 +1,7 @@
 # LoopCart (React Course Assignment)
 
+![image](src/assets/loopcart.png)
+
 This project was created as a javascript frameworks assignment for Noroff Frontend Development year 2.
 The project uses Noroff's API.
 
