@@ -99,3 +99,5 @@ Based on teacher feedback after delivery I have done the following improvements:
 - **console.log** - Some console.logs were hiding and have been removed
 - **Form labels** - The contact page had a missing label for the message field. This is now using the correct HTMLfor
 - **Unused files** - Files that was unused has been removed
+
+[Improvements Commit](https://github.com/Maribsorensen/javascript-frameworks-ca/commit/8b810cc49f917cf85333e5e2e49b0a2895eecf53)
